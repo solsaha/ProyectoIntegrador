@@ -4,4 +4,6 @@
     border-color: rgb(212, 77, 104);
     margin: 5px;
     text-align: center;
+    display: flex;
+    
 }
