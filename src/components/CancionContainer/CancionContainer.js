@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import SearchbyName from '../SearchByName/SearchByName';
-import Card from '../Card/Card';
 
 import './style.css'
 export default class CancionContainer extends Component {
@@ -13,15 +12,15 @@ export default class CancionContainer extends Component {
 //Hacemos el llamado a la API de deezer apenas se monta el componente
 
 componentDidMount() {
-    fetch('https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums')
+    fetch('https://developers.deezer.com/api/explorer?url=chart/0/albums')
         .then(response => { return response.json() })
         .then(data => {
-            console.log(data.data);
+            //console.log(data.results);
             //let personajes = data.results;
 
             //A la información que obtengo la guardo en el estado dentro de una propiedad
             this.setState({
-                album: data.data
+                album: data.results
             })
         })
         .catch(error => console.log(error));
@@ -57,11 +56,11 @@ render() {
                 < h4 > Cargando ... </h4>:
                 //no se cumple la condición
                 this.state.album.map((album, index) => {
-                    return <Card key={index}
+                    return <album key={index}
                     title={album.title}
-                    cover_medium={album.cover_medium}
-                    link={album.link}
-                    artist = {album.artist.name}
+                    cover={album.cover_medium}
+                    genero = {album.genre_id}
+                    artist = {album.artist}
                     // removerPersonaje = {(name)=>this.removerPersonaje(name)}
                     />
                 })
