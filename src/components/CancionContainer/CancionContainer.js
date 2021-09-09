@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SearchbyName from '../SearchByName/SearchByName';
+import SearchbyName from '../BusquedaNombre/SearchByName';
 
 import './style.css'
 export default class CancionContainer extends Component {
