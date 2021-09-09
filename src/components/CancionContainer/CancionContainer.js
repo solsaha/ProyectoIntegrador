@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SearchbyName from '../SearchByName/SearchByName';
 
 import './style.css'
 export default class CancionContainer extends Component {
@@ -24,6 +25,22 @@ componentDidMount() {
         })
         .catch(error => console.log(error));
 }
+filtrarPorNombre(nombreAFiltrar){
+    console.log(nombreAFiltrar);
+    const arrayFiltrada = this.state.albums.filter(
+       albums => albums.name.toLowerCase().includes(nombreAFiltrar.toLowerCase())
+    );
+    if(nombreAFiltrar === ""){
+        this.setState({
+            filteredAlbums: this.state.albums
+        })
+    } else {
+        this.setState({
+            filteredAlbums: arrayFiltrada
+        })
+    } 
+}
+
 render() {
     console.log("Me estoy renderizando!")
     console.log(this.state.album);
@@ -33,6 +50,7 @@ render() {
 
     return (
         <div className = 'container'>
+             <SearchbyName filtrarPorNombre={(nombreAFiltrar)=>this.filtrarPorNombre(nombreAFiltrar)} />
             {this.state.album === [] ?
                 //se cumple la condición
                 < h4 > Cargando ... </h4>:

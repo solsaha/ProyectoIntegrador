@@ -4,15 +4,14 @@ import './App.css';
 
 import CancionContainer from "./components/CancionContainer/CancionContainer";
 import Card from "./components/Card/Card";
-import NavBar from "./components/NavBar/NavBar";
-import Footer from "./components/Footer/Footer";
+//import NavBar from "./components/NavBar/NavBar";
+//import Footer from "./components/Footer/Footer";
 function App() {
   return (
     <div className="App">
       <CancionContainer/>
       <Card/>
-      <NavBar/>
-      <Footer/>
+      
     </div>
   );
 }
