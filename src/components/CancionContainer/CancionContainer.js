@@ -63,7 +63,7 @@ render() {
                     cover_medium={album.cover_medium}
                     link = {album.link}
                     artist = {album.artist.name}
-                    // removerPersonaje = {(name)=>this.removerPersonaje(name)}
+                    removerCancion = {(name)=>this.removerCancion(name)}
                     />
                 })
             }
