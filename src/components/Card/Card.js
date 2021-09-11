@@ -34,7 +34,7 @@ handleShow(){
                { <h4> Link al album: {this.props.link}</h4> }
                <p className='more' onClick={() => this.handleShow()}>{this.state.mensaje}</p>
                 <p className= {this.state.clase}>Aca va la descripcion de la cancion</p>
-                {/* <button onClick={()=> this.props.removerPersonaje(this.props.name)}> Eliminar personaje</button> */}
+                { <button onClick={()=> this.props.removerCancion(this.props.name)}> Remover</button> }
             </div>
         )
     }
