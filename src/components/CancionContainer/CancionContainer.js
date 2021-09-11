@@ -8,7 +8,8 @@ export default class CancionContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            album: []
+            album: [],
+            filteredAlbums: []
         }
     }
 //Hacemos el llamado a la API de deezer apenas se monta el componente
