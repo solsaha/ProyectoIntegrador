@@ -15,13 +15,13 @@ export default class searchByName extends Component {
     }
 
     capturaInput(evento){
-        //console.log(evento.target.value);
+        console.log(evento.target.value);
         this.setState({
             valorInput: evento.target.value 
         },
         //Funcion callback que se ejecuta inmediatamente después de
         //actualizar el estado.
-        () => this.props.searchbyName(this.state.valorInput)
+        //() => this.props.searchbyName(this.state.valorInput)
         )
     }
 
@@ -30,6 +30,8 @@ export default class searchByName extends Component {
             <form onSubmit={(evento)=> this.prevenirSubmit(evento)}>
                 <label>Name: </label>
                 <input onChange={(evento)=> this.capturaInput(evento) } type="text"/>
+                <h3> {this.state.valorInput}</h3> 
+                <input type= "submit"/>
             </form>
         )
     }
