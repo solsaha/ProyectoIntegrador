@@ -53,7 +53,9 @@ render() {
 
     return (
         <div className = 'container'>
-            <SearchbyName filtrarPorNombre={(nombreAFiltrar)=>this.filtrarPorNombre(nombreAFiltrar)} />
+            <p className = 'buscador'>
+                <SearchbyName filtrarPorNombre={(nombreAFiltrar)=>this.filtrarPorNombre(nombreAFiltrar)} />
+                </p>
             <section className = 'albums'> 
             {this.state.album === [] ?
                 //se cumple la condición
