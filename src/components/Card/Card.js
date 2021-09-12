@@ -27,13 +27,12 @@ handleShow(){
 }
     render() {
         return (
-            <div className = 'album'>
+            <div className = 'info'>
                {<img src={this.props.cover_medium} alt=""/> }
                { <h4> Nombre del album:{this.props.title} </h4> }
                { <h4> Artista: {this.props.artist}</h4> }
-               { <h4> Link al album: {this.props.link}</h4> }
                <p className='more' onClick={() => this.handleShow()}>{this.state.mensaje}</p>
-                <p className= {this.state.clase}>Aca va la descripcion de la cancion</p>
+                <p className= {this.state.clase}> {this.props.link} </p>
                 { <button onClick={()=> this.props.removerCancion(this.props.name)}> Remover</button> }
             </div>
         )

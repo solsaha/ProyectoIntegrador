@@ -1,11 +1,11 @@
-.album {
+.info {
+
     border-style: solid;
     border-radius: 4px;
     border-color: blanchedalmond;
     margin: 3px;
     text-align: justify;
    
-    
 }
 
 .more{
@@ -21,3 +21,4 @@
 .show{
     display:block;
 }
+

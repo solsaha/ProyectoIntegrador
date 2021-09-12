@@ -1,8 +1,7 @@
-.container {
+.albums {
     display: flex;
-    justify-content: space-evenly;
     flex-wrap: wrap;
-    align-items: flex-start;
+    justify-content: space-around;
     padding: 3px;
     margin: 3px;
 }

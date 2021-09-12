@@ -53,7 +53,8 @@ render() {
 
     return (
         <div className = 'container'>
-             <SearchbyName filtrarPorNombre={(nombreAFiltrar)=>this.filtrarPorNombre(nombreAFiltrar)} />
+            <SearchbyName filtrarPorNombre={(nombreAFiltrar)=>this.filtrarPorNombre(nombreAFiltrar)} />
+            <section className = 'albums'> 
             {this.state.album === [] ?
                 //se cumple la condición
                 < h4 > Cargando ... </h4>:
@@ -62,12 +63,13 @@ render() {
                     return <Card key={index}
                     title={album.title}
                     cover_medium={album.cover_medium}
-                    link = {album.link}
                     artist = {album.artist.name}
-                    removerCancion = {(name)=>this.removerCancion(name)}
+                    link = {album.link}
+                    removerCancion = {(Card)=> this.removerCancion(Card)}
                     />
                 })
             }
+            </section>
         </div>
     )
 }
