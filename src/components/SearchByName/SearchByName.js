@@ -30,7 +30,6 @@ export default class searchByName extends Component {
             <form onSubmit={(evento)=> this.prevenirSubmit(evento)}>
                 <label>Name: </label>
                 <input onChange={(evento)=> this.capturaInput(evento) } type="text"/>
-                <h3> {this.state.valorInput}</h3> 
                 <input type= "submit"/>
             </form>
         )

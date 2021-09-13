@@ -65,6 +65,15 @@ addCards(){
 
 }  
 
+removerAlbum (title){
+    const albumsFiltrados = this.state.albums.filter (album => album.title !== title)
+    this.setState({
+        albums: albumsFiltrados ,
+        filteredAlbums: albumsFiltrados
+        
+    })
+}
+
 render() {
     console.log("Me estoy renderizando!")
     console.log(this.state.albums);
@@ -87,7 +96,7 @@ render() {
                         cover_medium={album.cover_medium}
                         artist = {album.artist.name}
                         link = {album.link}
-                        removerCancion = {(Card)=> this.removerCancion(Card)}
+                        removerAlbum = {(Card)=> this.removerAlbum(Card)}
                     />
                 } )
                 
