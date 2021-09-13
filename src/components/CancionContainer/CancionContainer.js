@@ -8,9 +8,10 @@ export default class CancionContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            album: [],
+            albums: [],
             filteredAlbums: [],
-            index: 10
+            index: 10,
+            cargando: true
         }
     }
 //Hacemos el llamado a la API de deezer apenas se monta el componente
@@ -24,7 +25,9 @@ componentDidMount() {
 
             //A la información que obtengo la guardo en el estado dentro de una propiedad
             this.setState({
-                album: data.data
+                albums: data.data,
+                filteredAlbums: data.data,
+                cargando: false
             })
         })
         .catch(error => console.log(error));
@@ -32,7 +35,7 @@ componentDidMount() {
 filtrarPorNombre(nombreAFiltrar){
     console.log(nombreAFiltrar);
     const arrayFiltrada = this.state.albums.filter(
-       albums => albums.name.toLowerCase().includes(nombreAFiltrar.toLowerCase())
+       albums => albums.title.toLowerCase().includes(nombreAFiltrar.toLowerCase())
     );
     if(nombreAFiltrar === ""){
         this.setState({
@@ -44,65 +47,57 @@ filtrarPorNombre(nombreAFiltrar){
         })
     } 
 }
+addCards(){
+    fetch(`https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums&top?index=${this.state.index}&limit=10`)
+    .then(response=> response.json())
+    .then(data => {
+        /* let arrayPrevio = this.state.albums;
+        let arrayActualizado = arrayPrevio.concat(data.data); */
+        let indexActualizado = this.state.index + 10;
+        console.log(indexActualizado);
+        this.setState({
+            albums: [...this.state.albums, ...data.data],
+            filteredAlbums: [...this.state.filteredAlbums, ...data.data],
+            index: indexActualizado
+        })
+
+    })
+
+}  
 
 render() {
     console.log("Me estoy renderizando!")
-    console.log(this.state.album);
+    console.log(this.state.albums);
 
     //if ternario
     // condicion ? Se cumple : No se cumple
 
-    return ( <div className = 'container'> 
-    <SearchbyName />
-    <button onClick={()=> this.addCards()}>Agregar mas Albumes</button>
-    {this.state.datosFiltrados.length ===0 }
-                  addCards(){
-                        fetch(`https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums&top?index=${this.set.index}&limit=10`)
-                        .then(response=> response.json())
-                        .then(data => {
-                            let arrayPrevio = this.state.data;
-                            let arrayActualizado = arrayPrevio.concat(data.data);
-                            let indexActualizado = this.state.index + 10;
-                            console.log(indexActualizado);
-                            this.setState({
-                                datos: arrayActualizado,
-                                datosFiltrados: arrayActualizado,
-                                index: indexActualizado
-                            })
-                    
-                        })
-
-
-
-
-                    }  
-                </div>
-                ,
-        <div className = 'container'>
-            <p className = 'buscador'>
-                <SearchbyName filtrarPorNombre={(nombreAFiltrar)=>this.filtrarPorNombre(nombreAFiltrar)} />
-                </p>
-            <section className = 'albums'> 
-            {this.state.album === [] ?
-                //se cumple la condición
-                < h4 > Cargando ... </h4>:
-                //no se cumple la condición
-                this.state.album.map((album, index) => {
+    return ( 
+        <div className = 'container'> 
+            <SearchbyName filtrarPorNombre = {(nombre)=> this.filtrarPorNombre(nombre)}
+            />
+            <button onClick={()=> this.addCards()}>Agregar más Albumes</button>
+            {this.state.cargando? <p>Cargando...</p> : null}
+            {this.state.filteredAlbums.length ===0 ?
+                <p>No hay datos</p>
+            :
+                this.state.filteredAlbums.map((album, index) => {
                     return <Card key={index}
-                    title={album.title}
-                    cover_medium={album.cover_medium}
-                    artist = {album.artist.name}
-                    link = {album.link}
-                    removerCancion = {(Card)=> this.removerCancion(Card)}
-
-                 
+                        title={album.title}
+                        cover_medium={album.cover_medium}
+                        artist = {album.artist.name}
+                        link = {album.link}
+                        removerCancion = {(Card)=> this.removerCancion(Card)}
                     />
-                } 
-               )
+                } )
+                
             }
-            </section>
         </div>
     )
 }
-
+                
+             
+       
+    
 }
+

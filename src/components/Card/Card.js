@@ -33,7 +33,7 @@ handleShow(){
                { <h4> Artista: {this.props.artist}</h4> }
                <p className='more' onClick={() => this.handleShow()}>{this.state.mensaje}</p>
                 <p className= {this.state.clase}> {this.props.link} </p>
-                { <button onClick={()=> this.props.removerCancion(this.props.name)}> Remover</button> }
+                 <button onClick={()=> this.props.removerCancion(this.props.name)}> Remover</button> 
             </div>
         )
     }
