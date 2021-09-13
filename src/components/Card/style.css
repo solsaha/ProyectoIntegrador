@@ -3,10 +3,12 @@
     border-style: solid;
     border-radius: 4px;
     border-color: blanchedalmond;
-    margin: 3px;
-    text-align: justify;
+    margin: 5px;
+    text-align: center;
    background-color: rgb(156, 152, 153);
    font-family: Arial, Helvetica, sans-serif;
+   
+  
 }
 
 .more{
