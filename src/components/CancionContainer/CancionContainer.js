@@ -9,7 +9,8 @@ export default class CancionContainer extends Component {
         super(props);
         this.state = {
             album: [],
-            filteredAlbums: []
+            filteredAlbums: [],
+            index: 10
         }
     }
 //Hacemos el llamado a la API de deezer apenas se monta el componente
@@ -51,7 +52,32 @@ render() {
     //if ternario
     // condicion ? Se cumple : No se cumple
 
-    return (
+    return ( <div className = 'container'> 
+    <FilterField />
+    <button onClick={()=> this.addCards()}>Agregar mas Albumes</button>
+    {this.state.datosFiltrados.length ===0 }
+                  addCards(){
+                        fetch(`https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums&top?index=${this.set.index}&limit=10`)
+                        .then(response=> response.json())
+                        .then(data => {
+                            let arrayPrevio = this.state.data;
+                            let arrayActualizado = arrayPrevio.concat(data.data);
+                            let indexActualizado = this.state.index + 10;
+                            console.log(indexActualizado);
+                            this.setState({
+                                datos: arrayActualizado,
+                                datosFiltrados: arrayActualizado,
+                                index: indexActualizado
+                            })
+                    
+                        })
+
+
+
+
+                    }  
+                </div>
+                ,
         <div className = 'container'>
             <p className = 'buscador'>
                 <SearchbyName filtrarPorNombre={(nombreAFiltrar)=>this.filtrarPorNombre(nombreAFiltrar)} />
@@ -68,8 +94,11 @@ render() {
                     artist = {album.artist.name}
                     link = {album.link}
                     removerCancion = {(Card)=> this.removerCancion(Card)}
+
+                 
                     />
-                })
+                } 
+               )
             }
             </section>
         </div>
