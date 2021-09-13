@@ -9,6 +9,7 @@ export default class Card extends Component {
          this.state = {
             clase: 'hide',
             mensaje: 'Ver más'
+
         }
      }
 //Funcion o método que es llamado cuando se hace click en "ver mas o ver menos"
@@ -17,6 +18,7 @@ handleShow(){
         this.setState({
             clase: 'show',
             mensaje: "Ver menos"
+
         })
         } else {
         this.setState({
@@ -25,6 +27,7 @@ handleShow(){
         })   
     }
 }
+
     render() {
         return (
             <div className = 'info'>

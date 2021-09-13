@@ -11,7 +11,8 @@ export default class CancionContainer extends Component {
             albums: [],
             filteredAlbums: [],
             index: 10,
-            cargando: true
+            cargando: true,
+            
         }
     }
 //Hacemos el llamado a la API de deezer apenas se monta el componente
