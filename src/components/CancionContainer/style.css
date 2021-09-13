@@ -1,11 +1,11 @@
 .albums {
-    display: flex;
+     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-around; 
     padding: 3px;
-    margin: 3px;
-   
+   margin: 3px;
+
 };
 .container{
     background-color:dimgray;
