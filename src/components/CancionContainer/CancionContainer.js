@@ -53,7 +53,7 @@ render() {
     // condicion ? Se cumple : No se cumple
 
     return ( <div className = 'container'> 
-    <FilterField />
+    <SearchbyName />
     <button onClick={()=> this.addCards()}>Agregar mas Albumes</button>
     {this.state.datosFiltrados.length ===0 }
                   addCards(){

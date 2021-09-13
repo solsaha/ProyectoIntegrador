@@ -21,7 +21,7 @@ export default class searchByName extends Component {
         },
         //Funcion callback que se ejecuta inmediatamente después de
         //actualizar el estado.
-        //() => this.props.searchbyName(this.state.valorInput)
+        () => this.props.filtroPorNombre(this.state.valorInput)
         )
     }
 
