@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './style.css'
 
 export default class searchByName extends Component {
     constructor (){
@@ -27,11 +28,13 @@ export default class searchByName extends Component {
 
     render(){
         return(
+            <section className = 'buscador'>
             <form onSubmit={(evento)=> this.prevenirSubmit(evento)}>
-                <label>Name: </label>
+                <label>Busque: </label>
                 <input onChange={(evento)=> this.capturaInput(evento) } type="text"/>
-                <input type= "submit"/>
+                <input type= "submit" />
             </form>
+            </section>
         )
     }
 }
