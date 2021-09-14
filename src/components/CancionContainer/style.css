@@ -3,8 +3,8 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     align-items: flex-start;
-    padding: 1rem;
-    margin: 1rem;
+    padding: 1px;
+    margin: 5px;
 
 };
 .container{
@@ -15,9 +15,9 @@
 .container button {
     font-size: 15px;
     font-weight: 200;
-    color: white;
+   /*  color: white;
     background-color: black;
-    background: transparent;
+    background: transparent; */
     border-radius: 6px;
     border: none;
     padding: 16px 32px;
@@ -32,5 +32,5 @@
 }
 .container button:hover {
     
-    color: white;
+    /* color: white; */
 }

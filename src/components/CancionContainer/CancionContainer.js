@@ -87,6 +87,7 @@ render() {
             <SearchbyName filtrarPorNombre = {(nombre)=> this.filtrarPorNombre(nombre)}
             />
             <button onClick={()=> this.addCards()}>Agregar más albums</button>
+            <section className = 'albums'>
             {this.state.cargando? <p>Cargando...</p> : null} 
             {this.state.filteredAlbums.length ===0 ?
                 <p>No hay datos</p>
@@ -102,6 +103,7 @@ render() {
                 } )
                 
             }
+            </section>
         </div>
     )
 }

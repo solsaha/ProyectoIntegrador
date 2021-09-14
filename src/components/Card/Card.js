@@ -32,7 +32,7 @@ handleShow(){
         return (
             <div className = 'info'>
                {<img src={this.props.cover_medium} alt=""/> }
-               { <h4> Nombre del album:{this.props.title} </h4> }
+               { <h4> Album: {this.props.title} </h4> }
                { <h4> Artista: {this.props.artist}</h4> }
                <p className='more' onClick={() => this.handleShow()}>{this.state.mensaje}</p>
                 <p className= {this.state.clase}> {this.props.link} </p>
