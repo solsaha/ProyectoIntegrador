@@ -31,8 +31,7 @@ export default class searchByName extends Component {
             <section className = 'buscador'>
             <form onSubmit={(evento)=> this.prevenirSubmit(evento)}>
                 <label>Busque: </label>
-                <input onChange={(evento)=> this.capturaInput(evento) } type="text"/>
-                <input type= "submit" />
+                <input onChange={(evento)=> this.capturaInput(evento) } type="text" />
             </form>
             </section>
         )
