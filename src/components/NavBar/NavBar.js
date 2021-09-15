@@ -21,7 +21,7 @@ export default class NavBar extends Component {
             } else {
             this.setState({
                 vision: 'vertical',
-                mensaje: "cambiar orientacion"
+                mensaje: "cambiar de nuevo orientacion"
             })}    
         
         }
@@ -29,8 +29,8 @@ export default class NavBar extends Component {
         render() {
             return (
                 <div className = 'bloque'>
-                  <p>Orientacion:</p>
-                   <p className='more' onClick={() => this.viewShow()}>{this.state.mensaje}</p>
+                 
+                   <p className='more' onClick={() => this.viewShow()}> Orientacion {this.state.mensaje}</p>
                     <p className= {this.state.vision}> {this.props.link} </p>
                    
                 </div>

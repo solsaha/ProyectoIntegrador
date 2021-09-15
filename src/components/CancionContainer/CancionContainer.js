@@ -98,6 +98,8 @@ render() {
                         cover_medium={album.cover_medium}
                         artist = {album.artist.name}
                         link = {album.link}
+                        id= {album.id}
+                        tracklist= {album.tracklist}
                         removerAlbum = {(Card)=> this.removerAlbum(Card)}
                     />
                 } )
