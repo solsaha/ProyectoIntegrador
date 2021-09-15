@@ -29,7 +29,7 @@ export default class NavBar extends Component {
         render() {
             return (
                 <div className = 'bloque'>
-                 
+                 <h1>Go Talent</h1>
                    <p className='more' onClick={() => this.viewShow()}> Orientacion {this.state.mensaje}</p>
                     <p className= {this.state.vision}> {this.props.link} </p>
                    
