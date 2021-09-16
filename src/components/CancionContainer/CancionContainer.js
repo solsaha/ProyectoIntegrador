@@ -12,6 +12,7 @@ export default class CancionContainer extends Component {
             filteredAlbums: [],
             index: 10,
             cargando: true,
+            orientation: "row",
             
         }
     }
@@ -75,6 +76,20 @@ removerAlbum (title){
     })
 }
 
+changeOrientation(){
+if(this.state.orientation === "row"){
+    this.setState({
+        orientation: "column"
+    })
+} else {
+    this.setState({
+        orientation: "row"
+})
+}
+}
+
+
+
 render() {
     console.log("Me estoy renderizando!")
     console.log(this.state.albums);
@@ -87,7 +102,8 @@ render() {
             <SearchbyName filtrarPorNombre = {(nombre)=> this.filtrarPorNombre(nombre)}
             />
             <button onClick={()=> this.addCards()}>Agregar más albums</button>
-            <section className = 'albums'>
+            <button onClick={()=> this.changeOrientation()}>Cambiar orientación</button>
+            <section className = {`albums-${this.state.orientation}`}>
             {this.state.cargando? <p>Cargando...</p> : null} 
             {this.state.filteredAlbums.length ===0 ?
                 <p>No hay datos</p>
@@ -100,6 +116,7 @@ render() {
                         link = {album.link}
                         id= {album.id}
                         tracklist= {album.tracklist}
+                        orientation = {this.state.orientation}
                         removerAlbum = {(Card)=> this.removerAlbum(Card)}
                     />
                 } )

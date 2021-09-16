@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
+import './style.css'
+export default function Footer() {
 
-export default class Card extends Component {
-    constructor(props){
-
-     }
-render(){
-    return(
-        <section className = 'footer'>
-        <h2>Integrantes: Nicole Suchmon - Sol Saha - Magali Parra</h2>
-        </section>
+    return (
+        <div className = 'footer'>
+         <h3>Integrantes: Magalí Parra, Nicole Suchmon y Sol Saha</h3>
+        </div>
     )
-}
+
 }
