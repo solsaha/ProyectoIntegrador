@@ -51,7 +51,7 @@ handleShow(){
                 <h5 className={this.state.clase}>Id: {this.props.id} </h5>
                 <a href={this.props.link} className= {this.state.clase}> Ir a la descripción </a>
                 <br></br>
-                <a href= {this.props.tracklist} className={this.state.clase}>Escuchar la tracklist</a>
+                <h5 className={this.state.clase}>Position: {this.props.position} </h5>
 
                  <button onClick={()=> this.props.removerAlbum(this.props.title)}> Remover</button> 
             </div>

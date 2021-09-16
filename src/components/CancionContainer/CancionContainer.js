@@ -115,7 +115,7 @@ render() {
                         artist = {album.artist.name}
                         link = {album.link}
                         id= {album.id}
-                        tracklist= {album.tracklist}
+                        position= {album.position}
                         orientation = {this.state.orientation}
                         removerAlbum = {(Card)=> this.removerAlbum(Card)}
                     />
