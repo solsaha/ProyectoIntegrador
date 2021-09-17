@@ -1,11 +1,14 @@
 .info-row {
 
-    width: 100mm;
-    border-style:solid;
-    border-color: rgba(226, 234, 235, 0.651);
+    width: 307px;
+    border-radius: 2px;
+    border-style: solid;
+    border-width: 5px;
+    padding: 10px;
+    border-color: rgb(197, 182, 182);
     margin: 5px;
     text-align: center;
-    background-color: rgb(233, 173, 193);
+    background-color: rgba(109, 109, 109, 0.849);
     font-family: Arial, Helvetica, sans-serif;
     color: ivory;
     text-decoration: none;
@@ -14,34 +17,37 @@
 .info-column {
  display: flex;
     width: 80%;
-    border-style:solid;
-    border-color: rgba(226, 234, 235, 0.651);
+    border-radius: 2px;
+    border-style: solid;
+    border-color: rgb(197, 182, 182);
     margin: 5px;
     text-align: center;
-    background-color: #3f8eae;
     font-family: Arial, Helvetica, sans-serif;
     color: ivory;
     text-decoration: none;
+    background-color: rgba(109, 109, 109, 0.849);
+
 }
-.info-column .cardInfo {
+.info-column .cardInfo{
 display: flex;
-flex-direction: column;
+flex-direction: row;
+justify-content: space-between;
 
 } 
-.info img {
-    width: 120px;
-    padding: 6px 0px 0px 0px;
+.info-row img {
+    padding: 15px 0px 0px 0px;
+    filter: drop-shadow(5px 5px 10px rgb(0, 0, 0));
 }
 
-.info h4 {
+.info-row h4 {
     font-size: 15px;
     font-weight: 500;
 }
 
-.info button {
+.info-row button {
     font-size: 15px;
     font-weight: 200;
-    color: rgb(250, 182, 182);
+    color: rgb(0, 0, 0);
     background: transparent;
     border-radius: 6px;
     border: none;
@@ -55,14 +61,34 @@ flex-direction: column;
     text-decoration: none;
 
 }
-.info button:hover {
-    background-color: rgb(238, 197, 197);
-    color: black;
+.info-column button:hover {
+    background-color: rgb(3, 3, 3);
+    color: rgb(194, 194, 194);
+}
+.info-column button {
+    font-size: 15px;
+    font-weight: 200;
+    color: rgb(0, 0, 0);
+    background: transparent;
+    border-radius: 6px;
+    border: none;
+    padding: 16px 32px;
+    text-align: center;
+    display: inline-block;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+.info-row button:hover {
+    background-color: rgb(3, 3, 3);
+    color: rgb(216, 215, 215);
 }
 .more{
     color: rgb(185, 182, 182);
-    font-size: 14px;
-    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .more:hover{
     text-decoration: underline;
@@ -75,7 +101,7 @@ flex-direction: column;
     display:block;
 }
 
-.info a{
+.cardInfo a{
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     font-size: medium;

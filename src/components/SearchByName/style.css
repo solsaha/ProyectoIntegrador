@@ -8,10 +8,13 @@
     display: inline-block;
     margin: 4px 2px;
     text-decoration: none;
-    background-color: lightpink;
+    background-color: rgb(233, 233, 233);
     width: 40%;
-    border-radius: 100px;
+    border-radius: 8px;
     margin: 50px;
+    
+
+    
 }
 
 .buscador input{
