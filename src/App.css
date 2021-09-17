@@ -1,9 +1,10 @@
 .container {
+  
   padding: 0px;
   margin: 0px;
   /* text-align: left; */
   color: #3c3a2d;
-  background-color: rgb(146, 202, 193);
+  /* background-color: rgb(146, 202, 193); */
   /* rgb(243, 183, 160) */
 }
 .title{
@@ -33,3 +34,9 @@
   font-size: 12px;
 }
 
+.App{
+  background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fes.vexels.com%2Fvectores%2Fvista-previa%2F102058%2Ffondo-de-musica-colorida&psig=AOvVaw3oYfPdhwZIyKkyxqlFjbvd&ust=1631992165261000&source=images&cd=vfe&ved=0CAgQjRxqFwoTCODXsuvmhvMCFQAAAAAdAAAAABAI);
+  height: max-content;
+  position: relative;
+ 
+}
