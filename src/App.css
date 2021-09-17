@@ -33,9 +33,19 @@
   padding: 10px 20px;
   font-size: 12px;
 }
+.imglogo{
+  height: max-content;
+  position: relative;
 
+}
+
+ .fondo{
+  height: max-content;
+  
+} 
 .App{
   background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fes.vexels.com%2Fvectores%2Fvista-previa%2F102058%2Ffondo-de-musica-colorida&psig=AOvVaw3oYfPdhwZIyKkyxqlFjbvd&ust=1631992165261000&source=images&cd=vfe&ved=0CAgQjRxqFwoTCODXsuvmhvMCFQAAAAAdAAAAABAI);
+  background-color: rgb(192, 72, 72);
   height: max-content;
   position: relative;
  

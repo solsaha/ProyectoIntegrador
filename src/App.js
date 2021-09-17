@@ -10,14 +10,15 @@ import Footer from './components/Footer/Footer';
 function App() {
   return (
     <div className="App">
-      <img src={imagen} alt="logo"/>
+      
+      <img src={imagen} alt="logo" className= "imglogo"/> 
       
       
        <NavBar/>
        <CancionContainer/><img className='fondo' src={imagenfondo} alt=""/><img className='fondo' src={imagenfondo} alt=""/>
        <Footer/>
-      
-    </div>
+       </div>
+   
   );
 }
 
