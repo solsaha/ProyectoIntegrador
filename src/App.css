@@ -8,14 +8,7 @@
   background-color: rgb(146, 202, 193); 
   /* rgb(243, 183, 160) */
 }
-.title{
-  font-size: 30;
-  font-weight: 900;
-}
 
-.paragraph{
-  font-weight: 300
-}
 
 .button{
   padding: 10px 20px;
@@ -41,7 +34,7 @@
 }
 
 .app{
-  
+
   background-color: rgb(0, 0, 0);
  
 }

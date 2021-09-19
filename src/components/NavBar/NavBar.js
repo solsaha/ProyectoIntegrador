@@ -5,9 +5,9 @@ export default function NavBar() {
     
 
             return (
-                <div className = 'bloque'>
+                <section className = 'bloque'>
               <img src= "...public/LogoA.png" alt=''></img>
-                </div>
+                </section>
             )
         
     }
