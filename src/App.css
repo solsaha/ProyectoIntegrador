@@ -33,10 +33,10 @@
   font-size: 12px;
 }
 
-.imglogo{
+.App.imglogo{
   height: max-content;
   position: relative;
-  
+  align-items: center;
 
 }
 
