@@ -9,15 +9,14 @@ import Footer from './components/Footer/Footer';
 
 function App() {
   return (
-    <div className="App">
+  <section className="app">
       
       <img src={imagen} alt="logo" className= "imglogo"/> 
-     
-      {/* <img className='fondo' src={imagenfondo} alt=""/><img className='fondo' src={imagenfondo} alt=""/> */}
+
        <NavBar/>
        <CancionContainer/>
        <Footer/>
-       </div>
+    </section>
    
   );
 }
