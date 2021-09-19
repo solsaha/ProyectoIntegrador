@@ -1,7 +1,6 @@
 import React from 'react';
-import imagen from './LogoA.png'
-//import imagenfondo from './imagen.jpeg'
 import './App.css';
+import imagen from './LogoA.png'
 import NavBar from './components/NavBar/NavBar';
 import CancionContainer from "./components/CancionContainer/CancionContainer";
 import Footer from './components/Footer/Footer';
@@ -9,15 +8,15 @@ import Footer from './components/Footer/Footer';
 
 function App() {
   return (
-  <section className="app">
+    <div className="App">
       
-      <img src={imagen} alt="logo" className= "imglogo"/> 
+    <img src={imagen} alt="logo" className= "imglogo"/> 
+    
 
-       <NavBar/>
-       <CancionContainer/>
-       <Footer/>
-    </section>
-  
+     <NavBar/>
+     <CancionContainer/>
+     <Footer/>
+     </div>
   );
 }
 
