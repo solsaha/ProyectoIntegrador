@@ -1,6 +1,6 @@
 import React from 'react';
 import imagen from './LogoA.png'
-import imagenfondo from './imagen.jpeg'
+//import imagenfondo from './imagen.jpeg'
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import CancionContainer from "./components/CancionContainer/CancionContainer";
@@ -12,10 +12,10 @@ function App() {
     <div className="App">
       
       <img src={imagen} alt="logo" className= "imglogo"/> 
-      
-  
+     
+      {/* <img className='fondo' src={imagenfondo} alt=""/><img className='fondo' src={imagenfondo} alt=""/> */}
        <NavBar/>
-       <CancionContainer/><img className='fondo' src={imagenfondo} alt=""/><img className='fondo' src={imagenfondo} alt=""/>
+       <CancionContainer/>
        <Footer/>
        </div>
    
