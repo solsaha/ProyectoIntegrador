@@ -13,7 +13,7 @@ function App() {
       
       <img src={imagen} alt="logo" className= "imglogo"/> 
       
-      
+  
        <NavBar/>
        <CancionContainer/><img className='fondo' src={imagenfondo} alt=""/><img className='fondo' src={imagenfondo} alt=""/>
        <Footer/>
