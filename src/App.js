@@ -12,7 +12,6 @@ function App() {
       
     <img src={imagen} alt="logo" className= "imglogo"/> 
     
-
      <NavBar/>
      <CancionContainer/>
      <Footer/>
