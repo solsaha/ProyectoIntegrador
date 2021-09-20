@@ -4,7 +4,6 @@ import './style.css'
 export default class searchByName extends Component {
     constructor (){
         super();
-        //Valor inicial del estado
         this.state = {
             valorInput: ""
         }
@@ -20,8 +19,6 @@ export default class searchByName extends Component {
         this.setState({
             valorInput: evento.target.value 
         },
-        //Funcion callback que se ejecuta inmediatamente después de
-        //actualizar el estado.
         () => this.props.filtrarPorNombre(this.state.valorInput)
         )
     }
