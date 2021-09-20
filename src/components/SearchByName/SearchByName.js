@@ -10,7 +10,6 @@ export default class searchByName extends Component {
     }
 
     prevenirSubmit(evento){
-        console.log("Prevenimos el comportamiento por default del form que es recargar la página");
         evento.preventDefault();
     }
 
