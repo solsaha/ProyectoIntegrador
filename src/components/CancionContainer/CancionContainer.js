@@ -53,8 +53,6 @@ addCards(){
     fetch(`https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums&top?index=${this.state.index}&limit=10`)
     .then(response=> response.json())
     .then(data => {
-        /* let arrayPrevio = this.state.albums;
-        let arrayActualizado = arrayPrevio.concat(data.data); */
         let indexActualizado = this.state.index + 10;
         console.log(indexActualizado);
         this.setState({
