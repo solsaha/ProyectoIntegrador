@@ -58,8 +58,8 @@ addCards(){
         let indexActualizado = this.state.index + 10;
         console.log(indexActualizado);
         this.setState({
-            albums: [...this.state.albums, ...data.data],
-            filteredAlbums: [...this.state.filteredAlbums, ...data.data],
+            albums: this.state.albums.concat(data.data),
+            filteredAlbums: this.state.filteredAlbums.concat(data.data),
             index: indexActualizado
         })
 
